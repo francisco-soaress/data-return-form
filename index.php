@@ -7,6 +7,6 @@
     <title>Data Form Return</title>
 </head>
 <body>
-    
+    <form action=""></form>
 </body>
 </html>
