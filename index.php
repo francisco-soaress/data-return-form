@@ -15,6 +15,7 @@
     <section class="container">
         <div class="row ">
             <div class="col-md-6 pt-5 pb-5">
+
                 <?php
                 $conteudo = true;
                 if ($conteudo == true) :
@@ -25,12 +26,8 @@
                             <th>E-MAIL</th>
                             <th>ESTADO</th>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Saitama</td>
-                                <td>teste@teste.com.br</td>
-                                <td>São Paulo</td>
-                            </tr>
+                        <tbody class="tbody_content">
+                           
                         </tbody>
                     </table>
                 <?php
@@ -42,8 +39,8 @@
                 ?>
             </div>
             <div class="col-md-6 pt-5 pb-5">
-                <form action="" name="" class="" id="" method="post">
-
+                <form action="" name="form_contact" class="send-form" id="form_contact" method="post">
+                    <input type="hidden" name="send_hidden" value="recebe_form">
                     <div class="form-group">
                         <label for="nome">Nome: *</label>
                         <input class="form-control" type="text" name="nome" placeholder="Digite seu Nome." required>
@@ -55,7 +52,7 @@
                     <div class="form-group">
                         <label for="estado">Estado: *</label>
                         <select name="estado" class="form-control" id="estado">
-                            <option value="AC">Acre</option>
+                            <option>Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
                             <option value="AM">Amazonas</option>
@@ -85,17 +82,18 @@
                             <option value="EX">Estrangeiro</option>
                         </select>
                     </div>
-
-                    <button class="btn  btn-primary btn-lg form-control form-control-lg">Enviar contato</button>
-
+                    <button class="btn  btn-primary btn-lg form-control form-control-lg"><span>Enviar contato</span><img class="img-ajax-loading" src="img/ajax-loader.gif"></button>
+                    <div class="erro_tag bg-danger text-center text-white mt-3 p-2">Erro ao cadastrar<br> Tente novamente</div>
                 </form>
             </div>
         </div>
     </section>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
->>>>>>> 39939fbab61e87bafeaead38f521c61d3aa87993
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/send.js"></script>
 </body>
 
 </html>
